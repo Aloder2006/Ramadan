@@ -1,0 +1,193 @@
+body {
+    font-family: 'Amiri', serif;
+    background: linear-gradient(135deg, #1a1433, #0d1b1b, #071f29, #261919, #1f0033);
+    color: #d1c4e9;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #9575cd;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.countdown-highlight {
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    color: #e0d7ff;
+    margin: 20px 0;
+}
+
+#prayer-times {
+    margin-top: 20px;
+}
+
+.prayer-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 5px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.prayer-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.status-past { background-color: #666; }
+.status-current { background-color: #9575cd; }
+.status-upcoming { background-color: #4a3780; }
+
+.prayer-name {
+    flex: 1;
+    text-align: right;
+}
+
+.jamaah-time {
+    color: #b0a4d8;
+    font-size: 0.95rem;
+    margin-right: 10px;
+}
+
+.share-btn {
+    background-color: #4a3780;
+    color: #d1c4e9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.share-btn:hover {
+    background-color: #35255e;
+    transform: scale(1.05);
+}
+
+/* Dua Section */
+.dua-container {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+#dua-title {
+    font-size: 1.4rem;
+    color: #9575cd;
+    margin-bottom: 10px;
+}
+
+#dua-text {
+    font-size: 1.1rem;
+    color: #e0d7ff;
+}
+
+/* Location Modal Design */
+.glass-effect {
+    background: #261919;
+    border-radius: 8px;
+}
+
+/* Updated Loading Modal Design (Square, glass effect, centered) */
+.loading-modal {
+    background: rgba(26, 20, 51, 0.9); /* Semi-transparent dark purple */
+    border-radius: 8px;
+    width: 80px; /* Fixed width for square shape */
+    height: 80px; /* Fixed height for square shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Horizontal centering */
+    backdrop-filter: blur(10px); /* Glass blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Light shadow */
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensure horizontal centering */
+    min-height: 100vh; /* Full viewport height for vertical centering */
+}
+
+.modal-content {
+    color: #d1c4e9;
+    border: none;
+}
+
+/* Spinner Circle for Loading Modal */
+.spinner-circle {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #9575cd;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.btn-primary {
+    background-color: #4a3780;
+    border-color: #4a3780;
+}
+
+.btn-primary:hover {
+    background-color: #35255e;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    p, .prayer-item {
+        font-size: 1rem;
+    }
+    .countdown-highlight {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    .prayer-item {
+        padding: 8px;
+    }
+    .share-btn {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+    #dua-text {
+        font-size: 1rem;
+    }
+}
