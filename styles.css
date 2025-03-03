@@ -1,0 +1,269 @@
+body {
+    font-family: 'Amiri', serif;
+    color: #d1c4e9;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: gradientShift 20s ease infinite;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 60px; /* Space for fixed footer */
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #9575cd;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.countdown-highlight {
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    display: inline-block;
+    color: #e0d7ff;
+    margin: 20px 0;
+}
+
+#prayer-times {
+    margin-top: 20px;
+}
+
+.prayer-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 5px 0;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.prayer-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.status-past { background-color: #666; }
+.status-current { background-color: #9575cd; }
+.status-upcoming { background-color: #4a3780; }
+
+.prayer-name {
+    flex: 1;
+    text-align: right;
+}
+
+.prayer-name i {
+    margin-right: 5px;
+    color: #b0a4d8;
+}
+
+.jamaah-time {
+    color: #b0a4d8;
+    font-size: 0.95rem;
+    margin-right: 10px;
+}
+
+.share-btn {
+    background-color: #4a3780;
+    color: #d1c4e9;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.share-btn:hover {
+    background-color: #35255e;
+    transform: scale(1.05);
+}
+
+/* Quran Section */
+.quran-container {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.quran-container h2 {
+    font-size: 1.4rem;
+    color: #9575cd;
+    margin-bottom: 10px;
+}
+
+#quran-verse {
+    font-size: 1.1rem;
+    color: #e0d7ff;
+    margin-bottom: 5px;
+}
+
+.quran-info {
+    font-size: 0.9rem;
+    color: #b0a4d8;
+}
+
+/* Location Modal Design */
+.glass-effect {
+    background: #261919;
+    border-radius: 8px;
+}
+
+/* Loading Modal Design */
+.loading-modal {
+    background: rgba(26, 20, 51, 0.9);
+    border-radius: 8px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.modal-content {
+    color: #d1c4e9;
+    border: none;
+}
+
+/* Spinner Circle for Loading Modal */
+.spinner-circle {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #9575cd;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animated Background */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-primary {
+    background-color: #4a3780;
+    border-color: #4a3780;
+}
+
+.btn-primary:hover {
+    background-color: #35255e;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 20, 51, 0.9);
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #b0a4d8;
+    z-index: 1000;
+}
+
+.footer a {
+    color: #9575cd;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #e0d7ff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    p, .prayer-item {
+        font-size: 1rem;
+    }
+    .countdown-highlight {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    .prayer-item {
+        padding: 8px;
+    }
+    .share-btn {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+    #quran-verse {
+        font-size: 1rem;
+    }
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra Small Device Support (e.g., Smartwatches) */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .countdown-highlight {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    .prayer-item {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+    .quran-container {
+        padding: 10px;
+    }
+    .quran-container h2 {
+        font-size: 1.2rem;
+    }
+    #quran-verse {
+        font-size: 0.9rem;
+    }
+    .share-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    .footer {
+        font-size: 0.7rem;
+    }
+}
